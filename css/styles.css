@@ -1,0 +1,17 @@
+body {
+    font-family: "Karla", Arial, Helvetica, sans-serif;
+}
+
+.autovip-logo {
+    max-width: 150px;
+}
+
+#car-image-main {
+    background-image: url("../img/audi_1.jpg");
+    height: 820px;
+    object-fit: contain;
+}
+
+/* .border-warning {
+    color: orange;
+} */

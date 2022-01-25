@@ -49,9 +49,15 @@ $.ajax({
   },
 });
 
-for (let index = 1980; index <= Today.getFullYear(); index++) {
+for (let index = 2014; index <= Today.getFullYear(); index++) {
   salesApp.yearList.unshift(index);
 }
+
+/* for (let index = 1980; index <= Today.getFullYear(); index++) {
+  salesApp.yearList.unshift(index);
+} */
+
+
 
 $("#brand-selector").on("change", function () {
   $.ajax({
@@ -119,8 +125,21 @@ $("#brand-selector").change(function(){
   }
 });
 
-/* 
-$("#filter-clear").on("click", function () {
+
+$("#filter-clear-year").on("click", function (){
+  salesApp.yearSelected = "";
+});
+$("#filter-clear-brand").on("click", function (){
+  salesApp.brandSelected = "";
+});
+$("#filter-clear-model").on("click", function (){
+  salesApp.modelSelected = "";
+});
+$("#filter-clear-status").on("click", function (){
+  salesApp.statusSelected = "";
+});
+
+/* $("#filter-clear").on("click", function () {
   $.ajax({
     url: "https://ha.edu.uy/api/cars",
     success: function (cars) {
